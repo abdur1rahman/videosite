@@ -29,11 +29,10 @@
                 if(response.status==200 && response.data==1){
                     window.location.href="{{url('/')}}"
                 }else{
-                    window.location.href="{{url('/Login')}}";
+                    alert('worng username or password');
                 }
             }).catch(function (error) {
-                window.location.href="{{url('/Login')}}";
-
+               alert('response error');
             })
         })
     </script>
