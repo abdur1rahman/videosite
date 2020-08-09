@@ -16,7 +16,7 @@
     <link href=" {{asset('css/fontawesome.css')}} " rel="stylesheet">
     <link href=" {{asset('css/animate.css')}} " rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <title>@yield('title')</title>
 </head>
 <body>
     @include('Layout.Nav')
