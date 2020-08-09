@@ -11,6 +11,5 @@
             <a class="nav-item nav-link " href="{{url('/ragistion')}}">Ragistion</a>
             <a class="nav-item nav-link  " href="{{url("/Logout")}}">Logout</a>
         </div>
-
     </div>
 </nav>

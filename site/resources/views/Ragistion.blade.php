@@ -3,3 +3,4 @@
 @section('content')
 @include('Component.Ragistion')
 @endsection
+
