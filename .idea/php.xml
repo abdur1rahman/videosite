@@ -100,6 +100,7 @@
       <path value="$PROJECT_DIR$/site/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/site/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/site/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/site/vendor/artesaos/seotools" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

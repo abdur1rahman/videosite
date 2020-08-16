@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href={{url('/')}}>Hsc Ict <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link  " href="{{url("/play")}}">VideoDetails</a>
+
             <a class="nav-item nav-link " href="{{url('/ragistion')}}">Ragistion</a>
             <a class="nav-item nav-link  " href="{{url("/Logout")}}">Logout</a>
         </div>

@@ -1,6 +1,4 @@
-function Reset(){
-    rese
-}
+
 //Onclick sendbutton .///
     $('#sendContact').click(function (event) {
         event.preventDefault();
@@ -17,31 +15,16 @@ function Reset(){
 
 function contactSend(name,password,phone,bkas,trNo) {
     if(name.length==0){
-        $('#sendContact').html('name Empty');
-        setTimeout(function () {
-            $('#sendContact').html('পাঠিয়ে দিন');
-        },2000);
+        touster.error('emptyname faile');
     }else if(password.length==0){
-        $('#sendContact').html('pass Empty');
-        setTimeout(function () {
-            $('#sendContact').html('পাঠিয়ে দিন');
-        },2000);
+        touster.error('password faile');
     }else if(phone.length==0){
-        $('#sendContact').html('phone Empty');
-        setTimeout(function () {
-            $('#sendContact').html('পাঠিয়ে দিন');
-        },2000);
+        touster.error('phone faile');
     }
     if(bkas.length==0){
-        $('#sendContact').html( 'bkas Empty');
-        setTimeout(function () {
-            $('#sendContact').html('পাঠিয়ে দিন');
-        },2000);
+        touster.error('bkas faile');
     }else if(trNo.length==0){
-        $('#sendContact') .html('trno Empty');
-        setTimeout(function () {
-            $('#sendContact').html('পাঠিয়ে দিন');
-        },2000);
+        touster.error('trni faile');
     }else {
         axios.post('/sendata',{
             name:name,
@@ -52,23 +35,13 @@ function contactSend(name,password,phone,bkas,trNo) {
         }).then(function (response) {
             if(response.status==200){
                 if(response.data==true){
-                    $('#sendContact').html('আপনি সফল হয়েছেন');
-                    $('#sendContact').rest;
-                    setTimeout(function () {
-                        $('#sendContact').html('পাঠিয়ে দিন');
-                    },2000);
+                    touster.error('Ragistion success');
                 }else {
-                    $('#sendContact').html('আপনি ব্যর্থ হয়েছেন');
-                    setTimeout(function () {
-                        $('#sendContact').html('পাঠিয়ে দিন');
-                    },2000);
+                    touster.error('Ragistion faile');
                 }
 
             }else {
-                $('#sendContact').html('Network Connection Error');
-                setTimeout(function () {
-                    $('#sendContact').html('পাঠিয়ে দিন');
-                },2000)
+                touster.error('Ragistion faile');
             }
         }).catch(function (error) {
             touster.error('Ragistion faile');

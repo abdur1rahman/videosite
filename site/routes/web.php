@@ -26,5 +26,8 @@ Route::get('/Logout','LoginControll@Logout');
 //  Search Route/////
 
 Route::get('/Search','SearchController@SearchControll');
-Route::get('/play','HomeController@videwPlay');
+//Route::get('/videoDetailsPage/{id}/{videwName}','DetailsController@videoDetailsPage');
+Route::get('/seo','HomePageControl@Homeseo');
+Route::get('/videoDetailsPage/{id}/{videwName}','details@pageDetails');
+
 
