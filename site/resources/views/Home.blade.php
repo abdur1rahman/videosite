@@ -1,5 +1,5 @@
 @extends('Layout.app')
-@section('title','HomePage')
+@section('title','Home')
 @section('content')
     @include('Component.search')
     @include('Component.videw')

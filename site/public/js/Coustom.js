@@ -1,7 +1,7 @@
 
 //Onclick sendbutton .///
     $('#sendContact').click(function (event) {
-        event.preventDefault();
+        //event.preventDefault();
         var name = $('#username').val();
         var pass = $('#password').val();
         var phon = $('#phone').val();
@@ -14,18 +14,7 @@
 //start contact buttone///
 
 function contactSend(name,password,phone,bkas,trNo) {
-    if(name.length==0){
-        touster.error('emptyname faile');
-    }else if(password.length==0){
-        touster.error('password faile');
-    }else if(phone.length==0){
-        touster.error('phone faile');
-    }
-    if(bkas.length==0){
-        touster.error('bkas faile');
-    }else if(trNo.length==0){
-        touster.error('trni faile');
-    }else {
+
         axios.post('/sendata',{
             name:name,
             pass:password,
@@ -35,17 +24,17 @@ function contactSend(name,password,phone,bkas,trNo) {
         }).then(function (response) {
             if(response.status==200){
                 if(response.data==true){
-                    touster.error('Ragistion success');
+                   alert('success');
                 }else {
-                    touster.error('Ragistion faile');
+                    alert('try agin');
                 }
 
             }else {
                 touster.error('Ragistion faile');
             }
         }).catch(function (error) {
-            touster.error('Ragistion faile');
-        })
+            alert('somting want worng');
+        });
     }
 
-}
+

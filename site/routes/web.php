@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@Home')->middleware('loginCheck');
+
+Route::get('/homeseo', 'HomeController@HomeSeo');
+
 Route::get('/ragistion', 'RagistionController@Contact');
 Route::post('/sendata', 'RagistionController@contactSend');
 
@@ -26,7 +29,8 @@ Route::get('/Logout','LoginControll@Logout');
 //  Search Route/////
 
 Route::get('/Search','SearchController@SearchControll');
-//Route::get('/videoDetailsPage/{id}/{videwName}','DetailsController@videoDetailsPage');
+
+
 Route::get('/seo','HomePageControl@Homeseo');
 Route::get('/videoDetailsPage/{id}/{videwName}','details@pageDetails');
 

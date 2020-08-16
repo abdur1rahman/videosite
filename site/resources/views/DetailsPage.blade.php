@@ -1,6 +1,9 @@
 @extends('Layout.app')
-@section('title','Details Page')
+@section('title','Detailspage')
 @section('content')
     @include('Component.search')
     @include('Component.Details')
 @endsection
+
+
+

@@ -9,8 +9,8 @@
                     <input type="text" class="form-control" id="username" placeholder="Type you name">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password"  class="form-control" id="password"placeholder="Type you password">
+                    <label for="exampleInputPassword1">Email</label>
+                    <input type="email"required=""  class="form-control" id="password"placeholder="Type you Email">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Phone</label>
