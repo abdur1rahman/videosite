@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <a class="navbar-brand ml-5 pt-0 pb-0 " href="{{url('/')}}"><img style="width: 90px;" src='images/navlogoScroll.svg'> </a>
+    <a class="navbar-brand ml-5 pt-0 pb-0 " href="{{url('/')}}"><img class="logo" src='images/navlogoScroll.svg'> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

@@ -3,12 +3,18 @@
         <div class="row">
             @foreach($videwDataKey as $videwData)
                 <div class="col-md-4 mb-2">
-                    <a href="{{url('/videoDetailsPage/'.$videwData->id."/".$videwData->videwName)}}">
                         <div class="embed-responsive embed-responsive-16by9 mt-10">
-                            <iframe class="embed-responsive-item" src="{{$videwData->videwUrl}}" allowfullscreen></iframe>
+                            <a href="{{url('/videoDetailsPage/'.$videwData->id."/".$videwData->videwName)}}">
+                                <video class="embed-responsive-item"preload="auto"  controls
+                                       src="{{$videwData->videwUrl}}" >
+                                </video>
+                            </a>
                         </div>
                         <h5>{{$videwData->videwName}}</h5>
-                    </a>
+                        <div id="description">
+                            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+                            <p id="niceCount"> nice </p>
+                        </div>
                 </div>
             @endforeach
         </div>

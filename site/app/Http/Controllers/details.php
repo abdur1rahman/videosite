@@ -14,4 +14,10 @@ class details extends Controller
             'videwDataKey'=>$Getvideo,
         ]);
     }
+    function  relatedvideo(){
+        $Show = HomeModel::all();
+        return view('DetailsPage',[
+            'videwRelatedDataKey'=>$Show,
+        ]);
+    }
 }
