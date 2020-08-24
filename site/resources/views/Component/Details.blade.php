@@ -1,15 +1,27 @@
 
 <div class="container mt-5">
     <div class="row">
-        @foreach($videwDataKey as $videwData)
-            <div class="col-md-7 mb-2">
-                <div class="embed-responsive embed-responsive-16by9 mt-10">
-                    <video class="embed-responsive-item"preload="auto" autoplay="true"  controls
-                           src="{{$videwData->videwUrl}}" allowfullscreen>
+        <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9 mt-10">
+                    <video class="embed-responsive-item"preload="auto"  controls
+                           src="{{$detailsKey->videwUrl}}">
                     </video>
-                </div>
-                <h5>{{$videwData->videwName}}</h5>
+                </a>
             </div>
+            <h5>{{$detailsKey->videwName}}</h5>
+        </div>
+
+        @foreach($DetailsSideVideo as $ShowsideVideo)
+        <div class="col-md-3">
+            <div class="embed-responsive embed-responsive-16by9">
+                <a href="{{url('/videoDetailsPage/'.$ShowsideVideo->id."/".$ShowsideVideo->videwName)}}">
+                <video class="embed-responsive-item"preload="auto"  controls
+                       src="{{$ShowsideVideo->videwUrl}}" >
+                </video>
+                </a>
+            </div>
+            <h6>{{$ShowsideVideo->videwName}}</h6>
+        </div>
         @endforeach
     </div>
 </div>

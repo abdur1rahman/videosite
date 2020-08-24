@@ -9,15 +9,16 @@ class details extends Controller
 {
     function  pageDetails(Request $request){
         $id = $request->id;
-        $Getvideo = HomeModel::where('id',$id)->get();
+        $Show = HomeModel::where('id',$id)->first();
+        $ShowSide = HomeModel::all();
+        return view('DetailsPage',['detailsKey'=>$Show, 'DetailsSideVideo'=>$ShowSide]);
+    }
+
+    function  pageDetailsSidvideo(){
+        $ShowSide = HomeModel::all();
         return view('DetailsPage',[
-            'videwDataKey'=>$Getvideo,
+            'DetailsSideVideo'=>$ShowSide,
         ]);
     }
-    function  relatedvideo(){
-        $Show = HomeModel::all();
-        return view('DetailsPage',[
-            'videwRelatedDataKey'=>$Show,
-        ]);
-    }
+
 }

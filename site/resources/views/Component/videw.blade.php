@@ -12,8 +12,7 @@
                         </div>
                         <h5>{{$videwData->videwName}}</h5>
                         <div id="description">
-                            <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-                            <p id="niceCount"> nice </p>
+
                         </div>
                 </div>
             @endforeach

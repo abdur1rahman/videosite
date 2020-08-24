@@ -32,7 +32,10 @@ Route::get('/Search','SearchController@SearchControll');
 
 
 Route::get('/seo','HomePageControl@Homeseo');
+
+///Details page///
+
 Route::get('/videoDetailsPage/{id}/{videwName}','details@pageDetails');
-Route::get('/showvideo','details@relatedvideo');
+Route::get('/showSidevideo','details@pageDetailsSidvideo');
 
 

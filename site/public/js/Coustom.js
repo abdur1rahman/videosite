@@ -52,13 +52,3 @@ $('#niceCount').click(function () {
 
 
 
-function LikeUnLikeButton() {
-    $(".like-Unlike").click(function (e) {
-        if ($(this).html() == "1") {
-            $(this).html('Unlike');
-        }
-        else {
-            $(this).html('Like');
-        }
-    });
-}
